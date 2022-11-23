@@ -1,13 +1,5 @@
 export default {
 
-  publicRuntimeConfig: {
-    NOTION_API_DATABASE_ID_DOCS: process.env.NOTION_API_DATABASE_ID_DOCS
-  },
-
-  privateRuntimeConfig: {
-    NOTION_API_SECRET: process.env.NOTION_API_SECRET
-  },
-
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Brent Nequin',
@@ -57,7 +49,7 @@ export default {
     baseURL: '/',
     // proxyHeaders: false,
     // credentials: false,
-    proxy: true
+    // proxy: true
   },
 
   fontawesome: {
@@ -77,5 +69,13 @@ export default {
         autoprefixer: {}
       }
     }
+  },
+
+  publicRuntimeConfig: {
+    NOTION_API_DATABASE_ID_DOCS: process.env.NOTION_API_DATABASE_ID_DOCS
+  },
+
+  privateRuntimeConfig: {
+    NOTION_API_SECRET: process.env.NOTION_API_SECRET
   }
 }
