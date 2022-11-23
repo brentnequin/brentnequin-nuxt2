@@ -35,6 +35,7 @@ export default {
     '@nuxt/postcss8',
     '@nuxtjs/fontawesome',
     // 'vue-notion/nuxt'
+    '@nuxtjs/google-fonts'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -58,6 +59,13 @@ export default {
       solid: true,
       // brands: true,
       // regular: true
+    }
+  },
+
+  googleFonts: {
+    display: "swap",
+    families: {
+      'M PLUS Rounded 1c': [400],
     }
   },
 
