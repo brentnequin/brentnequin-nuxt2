@@ -8,8 +8,10 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
-    fontFamily: {
-      'm-plus-rounded-1c': ['"M PLUS Rounded 1c"', 'sans-serif']
+    extend: {
+      fontFamily: {
+        'm-plus-rounded-1c': ['"M PLUS Rounded 1c"', 'sans-serif']
+      }
     }
   },
   plugins: [],
