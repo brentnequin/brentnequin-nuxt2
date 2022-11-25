@@ -5,11 +5,15 @@
         Brent Nequin
       </h1>
     </div>
-    <div class="absolute flex-grow flex bottom-0 right-0 w-full">
-      <div class="mx-auto self-start animate-bounce">
-        <fa class="text-2xl" :icon="['solid', 'caret-down']" />
+    <main>
+      <div class="absolute flex-grow flex bottom-0 right-0 w-full">
+        <div class="mx-auto self-start animate-bounce">
+          <fa class="text-2xl" :icon="['solid', 'caret-down']" />
+        </div>
       </div>
-    </div>
-    <Posts />
+      <About />
+      <Projects />
+      <Posts />
+    </main>
   </div>
 </template>
