@@ -1,14 +1,15 @@
 <template>
     <div class="container my-24">
         <h2 class="text-3xl text-center my-8">My Blog</h2>
-        <div class="m-8 flex flex-wrap justify-center items-center space-x-8">
-            <Card 
-                v-for="page in pages"
-                v-bind:key="page.id"
-                :slug="page.id"
-                :title="page.properties.Name.title[0].plain_text"
-                :created_time="page.created_time"
-            />
+        <div class="m-4 flex flex-wrap justify-center items-center">
+            <div v-for="page in pages" v-bind:key="page.id" class="m-4">
+                <NuxtLink :to="page.id">
+                    <Card 
+                        :title="page.properties.Name.title[0].plain_text"
+                        :created-time="page.created_time"
+                    />
+                </NuxtLink>
+            </div>
         </div>
     </div>
 </template>

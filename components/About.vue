@@ -3,7 +3,7 @@
         <h2 class="text-3xl text-center my-8">About Me</h2>
         <div class="mx-8">
             <div v-for="item, index in timeline" :key="index" class="flex">
-                <span class="min-w-[20%]">{{ item.year + (item.present ? " - Present" : "") }}</span>
+                <span class="min-w-[30%] sm:min-w-[25%] md:min-w-[20%]">{{ item.year + (item.present ? " - Present" : "") }}</span>
                 <span>{{ item.description }}</span>
             </div>
         </div>

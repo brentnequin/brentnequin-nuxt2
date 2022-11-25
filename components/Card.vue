@@ -1,37 +1,37 @@
 <template>
-    <nuxt-link to="#">
     <div class="w-64">
-            <div class="h-32 w-full rounded-md bg-cover bg-center bg-no-repeat" :style='`background-image: url("${imgSrc}")`'></div>
-            <div class="my-8">
-                <h4 class="font-bold mb-2">{{ title }}</h4>
-                <div class="text-xs text-gray-400">
-                    {{ subtitle }}
-                    <slot />
-                </div>
+        <div class="h-32 w-full rounded-md bg-cover bg-center bg-no-repeat bg-gradient-to-r from-sky-500 to-indigo-500" :style='imgSrc ? `background-image: url("${imgSrc}")` : ""'></div>
+        <div class="my-8">
+            <div class="text-xs text-gray-400">{{ new Date(createdTime).toDateString().split(' ').slice(1).join(' ') }}</div>
+            <h4 class="font-bold mb-2">{{ title }}</h4>
+            <div class="text-xs text-gray-400">
+                {{ subtitle }}
+                <slot />
             </div>
         </div>
-    </nuxt-link>
+    </div>
 </template>
 
 <script>
 export default {
     props: {
         imgSrc: {
-            type: String,
-            default: "https://www.notion.so/image/https:%2F%2Fres.cloudinary.com%2Fsev-deg-dev%2Fimage%2Fupload%2Fv1661509944%2FPersonal%2520Blog%2520Cover%2520Images%2Fdxx8jqobbxdlajbsy25i.jpg?table=block&id=64b6a708-d67a-4240-ac9f-9f393987771a&cache=v2"
+            type: String
         },
         title: {
-            type: String,
-            default: ""
+            type: String
         },
         subtitle: {
+            type: String
+        },
+        createdTime: {
             type: String,
-            default: ""
+            default: "2022-10-11T19:58:00.000Z"
         },
         horizontal: {
             type: Boolean,
             default: false
-        }
+        },
     }
 }
 </script>
