@@ -1,5 +1,5 @@
 <template>
-    <div class="w-64">
+    <div class="w-72">
         <div class="h-32 w-full rounded-md bg-cover bg-center bg-no-repeat bg-gradient-to-r from-sky-500 to-indigo-500" :style='imgSrc ? `background-image: url("${imgSrc}")` : ""'></div>
         <div class="my-8">
             <div class="text-xs text-gray-400">{{ new Date(createdTime).toDateString().split(' ').slice(1).join(' ') }}</div>

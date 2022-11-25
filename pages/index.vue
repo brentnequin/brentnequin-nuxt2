@@ -12,7 +12,7 @@
         </div>
       </div>
       <About />
-      <Projects />
+      <!-- <Projects /> -->
       <Posts />
     </main>
   </div>
