@@ -24,11 +24,7 @@ export default {
     },
 
     async fetch () {
-        this.pages = await this.$store.dispatch('getDocs')
-    },
-
-    mounted() {
-        console.log(this.pages)
+        this.pages = await this.$store.dispatch('getPages', this.$config.NOTION_API_DATABASE_ID_DOCS)
     }
 }
 </script>

@@ -1,10 +1,10 @@
 import { Client } from '@notionhq/client'
 
 export const actions = {
-    async getDocs () {
+    async getPages (context, database_id) {
         const notion = new Client({ auth: this.$config.NOTION_API_SECRET })
         const response = await notion.databases.query({ 
-            database_id: this.$config.NOTION_API_DATABASE_ID_DOCS,
+            database_id: database_id, //this.$config.NOTION_API_DATABASE_ID_DOCS,
             filter: {
                 property: "Published",
                 checkbox: {
@@ -18,5 +18,24 @@ export const actions = {
         })
 
         return response.results
+    },
+
+    async getPage(context, page_id) {
+        const notion = new Client({ auth: this.$config.NOTION_API_SECRET })
+        const response = await notion.pages.retrieve({
+            page_id: page_id
+        });
+
+        return response
+    },
+
+    async getPageBlocks(context, page_id) {
+        const notion = new Client({ auth: this.$config.NOTION_API_SECRET })
+        const response = await notion.blocks.children.list({
+            block_id: page_id
+        });
+
+        return response.results
     }
+
 }
