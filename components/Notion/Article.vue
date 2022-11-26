@@ -11,7 +11,7 @@ export default {
     data() {
         return {
             page: null,
-            block: null
+            blocks: null
         }
     },
 
