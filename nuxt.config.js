@@ -34,7 +34,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/postcss8',
     '@nuxtjs/fontawesome',
-    // 'vue-notion/nuxt'
+    // 'vue-notion/nuxt',
     '@nuxtjs/google-fonts'
   ],
 
@@ -44,6 +44,15 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/markdownit'
   ],
+
+  markdownit: {
+    // preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: [
+      // 'markdown-it-prism',
+    ]
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -72,6 +81,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend(config, ctx) {
+      config.resolve.alias["vue$"] = "vue/dist/vue.esm.js"
+    },
     postcss: {
       plugins: {
         tailwindcss: {},
