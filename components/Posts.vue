@@ -8,6 +8,7 @@
                     <Card 
                         :title="page.properties.Name.title[0].plain_text"
                         :created-time="page.created_time"
+                        :imgSrc="page.cover[page.cover.type].url"
                     />
                 </a>
                 <!-- </NuxtLink> -->

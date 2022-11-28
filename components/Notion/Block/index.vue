@@ -1,18 +1,22 @@
 <template>
-    <h1 v-if="block.type === 'heading_1'" v-html="handleRichText" class="text-4xl" />
-    <h2 v-else-if="block.type === 'heading_2'" v-html="handleRichText" class="text-3xl" />
+    <h1 v-if="block.type === 'heading_1'" v-html="handleRichText" class="text-4xl mt-8" />
+    <h2 v-else-if="block.type === 'heading_2'" v-html="handleRichText" class="text-3xl mt-8" />
+    <h3 v-else-if="block.type === 'heading_3'" v-html="handleRichText" class="text-2xl mt-8" />
     <p v-else-if="block.type === 'paragraph'" v-html="handleRichText" />
-    <div v-else-if="block.type === 'code'" class="bg-gray-400 rounded-md">
+    <div v-else-if="['bulleted_list_item', 'numbered_list_item'].includes(block.type)" class="pl-8"><li  v-html="handleRichText" class="pl-2" /></div>
+    <div v-else-if="block.type === 'code'" class="bg-gray-200 rounded-md">
         <div class="p-4 overflow-x-auto"
             v-html="$md.render(
                 '```' + 
                 (block[block.type].language === 'plain text' ? '' : block[block.type].language) + 
                 '\n' + 
-                block[block.type].rich_text[0].text.content,
+                block[block.type].rich_text.map(({text}) => text.content).join(''),
                 '\n' + '```'
             )"
             />
     </div>
+    <div v-else-if="['column_list', 'toggle'].includes(block.type)" class="hidden" />
+    <p v-else>?</p>
 </template>
 
 <script>

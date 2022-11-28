@@ -42,17 +42,18 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    // '@nuxt/content'
   ],
 
-  markdownit: {
-    // preset: 'default',
-    linkify: true,
-    breaks: true,
-    use: [
-      // 'markdown-it-prism',
-    ]
-  },
+  // markdownit: {
+  //   preset: 'default',
+  //   linkify: true,
+  //   breaks: true,
+  //   use: [
+  //     'markdown-it-prism',
+  //   ]
+  // },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
