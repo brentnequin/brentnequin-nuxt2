@@ -4,7 +4,8 @@
         <div class="m-4 flex flex-wrap justify-center">
             <div v-for="page in pages" v-bind:key="page.id" class="m-4">
                 <!-- <NuxtLink :to="{path: 'read', query: { s: page.id }}" no-prefetch> -->
-                <a :href="`/read?s=${page.id}`">
+                <!-- <a :href="`/read?s=${page.id}`"> -->
+                <a :href="page.url">
                     <Card 
                         :title="page.properties.Name.title[0].plain_text"
                         :created-time="page.created_time"
@@ -12,8 +13,10 @@
                     />
                 </a>
                 <!-- </NuxtLink> -->
+                <!-- {{ page }} -->
             </div>
         </div>
+        <div></div>
     </div>
 </template>
 
