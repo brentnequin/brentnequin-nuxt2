@@ -13,7 +13,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type:"image/png",  href: '/icons8-quarter-rest-32.png' }
     ]
   },
 
@@ -99,5 +99,10 @@ export default {
 
   privateRuntimeConfig: {
     NOTION_API_SECRET: process.env.NOTION_API_SECRET
+  },
+
+  storybook: {
+    // Options
   }
+  
 }

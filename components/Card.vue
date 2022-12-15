@@ -4,7 +4,7 @@
         <div class="my-8">
             <div class="text-xs text-gray-400">{{ new Date(createdTime).toDateString().split(' ').slice(1).join(' ') }}</div>
             <h4 class="font-bold mb-2">{{ title }}</h4>
-            <div class="text-xs text-gray-400">
+            <div v-if="!noSubtitle" class="text-xs text-gray-400">
                 {{ subtitle }}
                 <slot />
             </div>
@@ -19,10 +19,12 @@ export default {
             type: String
         },
         title: {
-            type: String
+            type: String,
+            default: "Title"
         },
         subtitle: {
-            type: String
+            type: String,
+            default: "Subtitle"
         },
         createdTime: {
             type: String,
@@ -30,8 +32,8 @@ export default {
         },
         horizontal: {
             type: Boolean,
-            default: false
         },
+        noSubtitle: Boolean
     }
 }
 </script>

@@ -2,7 +2,7 @@
   <div>
     <div class="h-screen flex justify-center">
       <h1 class="text-5xl self-center">
-        Brent Nequin
+        <BrentNequin />
       </h1>
     </div>
     <main>
