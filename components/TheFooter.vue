@@ -3,7 +3,7 @@
         <hr class="border" />
         <div class="m-8 grid grid-cols-2">
             <div class="flex flex-col">
-                <span class="h-[24px]""><small>© Brent Nequin 2022</small></span>
+                <span class="h-[24px]"><small>© Brent Nequin 2022</small></span>
                 <a href="https://paypal.me/turtlx?country.x=US&locale.x=en_US">
                     <small>Buy me a cup of coffee</small>
                 </a>
