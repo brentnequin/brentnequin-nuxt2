@@ -20,6 +20,7 @@ export default {
     async fetch () {
         this.page = await this.$store.dispatch('getPage', this.$route.query.s),
         this.blocks = await this.$store.dispatch('getPageBlocks', this.$route.query.s)
+        this.$emit('title', this.page.properties.Name[this.page.properties.Name.type][0].plain_text)
     },
 
     mounted() {
