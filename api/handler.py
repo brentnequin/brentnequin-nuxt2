@@ -1,5 +1,6 @@
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
+
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         s = self.path

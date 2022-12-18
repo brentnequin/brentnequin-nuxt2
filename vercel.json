@@ -6,14 +6,14 @@
             "config": {}
         },
         {
-            "src": "api/**/*.js",
+            "src": "api/**/*.py",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
           "src": "/api/(.*)",
-          "dest": "/api/$1.js",
+          "dest": "/api/$1.py",
           "methods": ["GET", "OPTIONS"],
           "headers": {
             "Access-Control-Allow-Methods": "GET",
