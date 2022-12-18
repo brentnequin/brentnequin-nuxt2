@@ -1,14 +1,10 @@
-from flask import Flask
-from flask_restful import Resource, Api
+from http.server import BaseHTTPRequestHandler
 
-app = Flask(__name__)
-api = Api(app)
+class handler(BaseHTTPRequestHandler):
 
-class Ping(Resource):
-    def get(self):
-        return {'result': 'pong'}
-
-api.add_resource(Ping, '/api/ping')
-
-if __name__ == '__main__':
-    app.run(debug=True)
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-type','text/plain')
+        self.end_headers()
+        self.wfile.write('Hello, world!'.encode('utf-8'))
+        return
