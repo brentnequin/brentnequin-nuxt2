@@ -12,7 +12,8 @@
     "lint": "yarn lint:js",
     "lintfix": "yarn lint:js --fix",
     "test": "jest",
-    "storybook": "nuxt storybook"
+    "storybook": "nuxt storybook",
+    "api:dev": "poetry run flask --app api/index.py run"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.2",
