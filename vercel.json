@@ -5,9 +5,5 @@
             "use": "@nuxtjs/vercel-builder",
             "config": {}
         }
-    ],
-    "functions": {
-		"api/handler.js": {
-		}
-	}
+    ]
 } 
