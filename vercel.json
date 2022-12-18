@@ -7,7 +7,7 @@
         },
         {
             "src": "api/**/*.py",
-            "use": "@vercel/node"
+            "use": "@vercel/python"
         }
     ],
     "routes": [
