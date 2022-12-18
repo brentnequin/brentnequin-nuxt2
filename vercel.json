@@ -13,7 +13,7 @@
     "routes": [
         {
           "src": "/api/(.*)",
-          "dest": "/api/$1.py",
+          "dest": "/api/handler.py",
           "methods": ["GET", "OPTIONS"],
           "headers": {
             "Access-Control-Allow-Methods": "GET",
