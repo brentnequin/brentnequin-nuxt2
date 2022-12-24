@@ -5,7 +5,8 @@
 @tailwind utilities;
 
 @layer base {
-    html {
+    body {
         font-family: 'M PLUS Rounded 1c', sans-serif;
+        @apply bg-slate-800 text-slate-300
     }
 }

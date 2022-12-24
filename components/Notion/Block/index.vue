@@ -4,7 +4,7 @@
     <h3 v-else-if="block.type === 'heading_3'" v-html="handleRichText" class="text-2xl mt-8" />
     <p v-else-if="block.type === 'paragraph'" v-html="handleRichText" />
     <div v-else-if="['bulleted_list_item', 'numbered_list_item'].includes(block.type)" class="pl-8"><li  v-html="handleRichText" class="pl-2" /></div>
-    <div v-else-if="block.type === 'code'" class="bg-gray-200 rounded-md">
+    <div v-else-if="block.type === 'code'" class="bg-slate-600 rounded-md">
         <div class="p-4 overflow-x-auto"
             v-html="$md.render(
                 '```' + 
