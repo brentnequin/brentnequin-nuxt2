@@ -1,12 +1,12 @@
 {
     "builds": [
         { "src": "nuxt.config.js", "use": "@nuxtjs/vercel-builder" },
-        { "src": "api/**/*.js", "use": "@vercel/node" }
+        { "src": "api/**/*.py", "use": "@vercel/python" }
     ],
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "/api/$1.js",
+            "dest": "/api/$1.py",
             "methods": ["GET", "OPTIONS"],
             "headers": {
                 "Access-Control-Allow-Methods": "GET",
